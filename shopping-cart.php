@@ -1,6 +1,15 @@
+<?php 
+    // Todo: Start a session 
+    //       Docs: https://www.php.net/manual/fr/book.session.php
+    // Todo: If there are products in the cart display them
+    //       Otherwise display: "The cart is empty" msg and disable the Go to checkout button.
+    // Todo: When the user clicks the button send them to the checkout page
+    // Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
+?>
 <?php  require "./src/inc/header.php"; ?>
 <section class="card-main">
     <h2 class="card-title">Your <span>cart</span> (X Articles)</h2>
+    <?php // Generate the html for the products here ?>
     <div class="basket-main">
         <img src="./public/images/products/shoe_two.png" alt="Chaussure AirMax" class="card-img">
         <div class="info-card">

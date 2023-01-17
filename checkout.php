@@ -4,6 +4,7 @@
     // Todo: If the form has been submitted validate and sanitaze input
     // Todo: If the data from the form is valid empty the cart and display a succes msg
     //       instead of the form, if one of the inputs was invalid add a red outline to the input
+    // Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
 ?>
 <?php  require "./src/inc/header.php"; ?>
 <article class="form-container">
@@ -13,7 +14,7 @@
         </h1>
 
         <div class="checkout-cart">
-            // The content of the cart goes here
+            <?php // The content of the cart goes here ?>
         </div>
     </div>
 
@@ -53,7 +54,7 @@
                 <label for="country">Country : </label>
                 <select class="form-input" name="country" id="country" required>
                     <?php 
-                        // Generate the inputs here
+                        // Generate the options here
                     ?>
                 </select>
             </div>
