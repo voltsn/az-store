@@ -12,7 +12,7 @@
     <title>AZ store</title>
     <link rel="shortcut icon" href="src\img\favicon.png" type="image/x-icon">
 </head>
-<!--
+
 <body>
     <header>
         <nav>
@@ -30,5 +30,5 @@
             
         </nav> 
     </header>
-    -->
+   
 <main>
