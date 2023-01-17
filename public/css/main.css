@@ -54,7 +54,7 @@ textarea {
   padding-top: 2%;
   font-family: "Heebo", sans-serif;
   color: white;
-  font-size: 50%;
+  font-size: 100%;
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ textarea {
   }
   .marketing .baseline_marketing {
     width: 55%;
-    font-size: 100%;
+    font-size: 150%;
     font-weight: 300;
   }
 }
