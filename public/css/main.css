@@ -2,6 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 body {
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+  color: #fff;
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.accent {
+  color: #0061BA;
 }
 
 .footer-main {
@@ -93,5 +107,30 @@ textarea {
     margin-bottom: 7vh;
   }
 } /*# sourceMappingURL=main.css.map */
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+.hero > div {
+  width: 50%;
+}
+.hero .hero__heading {
+  text-transform: uppercase;
+  font-size: clamp(1.5625rem, 0.431rem + 4.8276vw, 3.75rem);
+}
+.hero .hero__btn {
+  background: linear-gradient(90deg, #49A8FF 0%, #007CEE 100%);
+  border: none;
+  color: #fff;
+  font-size: 0.5625rem;
+  padding: 0.5em 0.8em;
+  font-weight: 600;
+  font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
+  margin-top: 1em;
+}
 
 /*# sourceMappingURL=main.css.map */

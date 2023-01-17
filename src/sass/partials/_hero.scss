@@ -1,0 +1,26 @@
+.hero{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    
+    & > div{
+        width: 50%;
+    }
+    .hero__heading{
+        text-transform: uppercase;
+        font-size: clamp(1.5625rem, 0.431rem + 4.8276vw, 3.75rem);
+    }
+    .hero__btn{
+        background: linear-gradient(90deg, #49A8FF 0%, #007CEE 100%);
+        border: none;
+        color: #fff;
+        font-size: .5625rem;
+        padding: 0.5em .8em;
+        font-weight: 600;
+        font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
+        margin-top: 1em;
+    }
+    
+}
