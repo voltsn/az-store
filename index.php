@@ -1,3 +1,15 @@
+<?php 
+    // Todo: Start a session
+    // Todo: Include the products array 
+    // Todo: Add the products in the UI
+    // Todo: Update the cart when the user clicks on either the add or the remove button
+    //       Idea: perhaps create a javscript file containing one or more asyncronus functions
+    //             that make a post request using the fetch api, to another php page 
+    //             containing a script that updates the cart that is stored in $_SESSION.
+    //             In this particual scenario a new php file should be created
+    // Note: HTML can be generated in php simply using echo:
+    //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
+?>
 <?php require "./src/inc/header.php"; ?>
     <section class="hero">
         <div class="hero-text">
