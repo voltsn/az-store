@@ -1,5 +1,27 @@
 .footer-main {
   background-color: #1E1E1E;
+  padding: 10vw;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2vh;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.footer-link-git {
+  list-style: none;
+}
+.footer-link-git a {
+  text-decoration: none;
+  color: #fff;
 }
 
 html {
