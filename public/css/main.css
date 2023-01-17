@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap");
 body {
   background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
@@ -54,6 +54,21 @@ textarea {
   color: white;
   font-size: 50%;
   text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .marketing .shoe {
+    width: 25%;
+  }
+  .marketing h2 {
+    width: 50%;
+    font-size: 400%;
+  }
+  .marketing .baseline_marketing {
+    width: 55%;
+    font-size: 100%;
+    font-weight: 300;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

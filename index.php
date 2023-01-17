@@ -24,7 +24,7 @@
 <section class="marketing">
     <img class="shoe" src="src\img\shoe_two.png" alt="shoe Nike">
     <h2>We provide you the <span>best</span>quality</h2>
-    <p class="baseline_marketing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorem dolores? Maxime molestias </p>
+    <p class="baseline_marketing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aspernatur? Voluptas quae ipsam beatae enim magni ut repudiandae, corrupti earum nam itaque natus.</p>
 </section>
 <div>
     <article>

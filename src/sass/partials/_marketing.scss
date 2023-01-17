@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap');
 
 .marketing{
     width: 100%;
@@ -28,5 +28,21 @@
         color: white;
         font-size: 50%;
         text-align: center;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .marketing{
+        .shoe{
+            width: 25%;
+        }
+        h2{
+            width: 50%;
+            font-size: 400%;
+        }
+        .baseline_marketing{
+            width: 55%;
+            font-size: 100%;
+            font-weight: 300;
+        }
     }
 }
