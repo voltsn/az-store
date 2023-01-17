@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 body {
+  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
 }
 
@@ -28,7 +29,6 @@ body {
 .footer-link-git {
   list-style: none;
 }
-
 .footer-link-git a {
   text-decoration: none;
   color: #fff;
@@ -92,6 +92,6 @@ textarea {
     gap: 10rem;
     margin-bottom: 7vh;
   }
-} /*# sourceMappingURL=main.css.map */
+}
 
 /*# sourceMappingURL=main.css.map */
