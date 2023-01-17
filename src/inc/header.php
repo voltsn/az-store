@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZ store</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
         <img src="src\img\AZstore_1.png" alt="Logo white AZ store">
@@ -20,6 +23,6 @@
                     <a href="#">Login</a>
                 </li>
             </ul>
-        </nav> 
+        </nav>
     </header>
     <main>
