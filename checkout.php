@@ -4,6 +4,10 @@
         <h1 class="form-header-heading">
             Checkout
         </h1>
+
+        <div class="checkout-cart">
+
+        </div>
     </div>
 
     <div class="form-body">
@@ -39,15 +43,14 @@
             </div>
 
             <div class="form-control">
-                <select class="form-input" name="country" required>
+                <label for="country">Country : </label>
+                <select class="form-input" name="country" id="country" required>
                     <option value="belgium" selected>Belgium</option>
                     <option value="Germany">Germany</option>
-
                 </select>
-                <label for="city">Country</label>
             </div>
 
-            <button class="btn" type="submit">Send</button>
+            <button class="checkout-submit-btn" type="submit">Send</button>
         </form>
     </div>
 </article>
