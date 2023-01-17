@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/main.css">
     <title>AZ store</title>
-    <link rel="stylesheet" href="main.css">
 </head>
-
+<!--
 <body>
     <header>
         <img src="src\img\AZstore_1.png" alt="Logo white AZ store">
@@ -26,4 +25,5 @@
             </ul>
         </nav>
     </header>
-    <main>
+    -->
+<main>

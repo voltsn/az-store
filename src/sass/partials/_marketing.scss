@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
 .marketing{
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     .shoe{
-        width: 50%;
+        width: 30%;
+    }
+    h2{
+        width: 60%;
+        font-family: 'Heebo', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 160%;
+        color: white;
+        span{
+            color: #2462ea;
+        }
+    }
+    .baseline_marketing{
+        width: 70%;
+        font-family: 'Heebo', sans-serif;
+        color: white;
+        font-size: 50%;
+        text-align: center;
     }
 }

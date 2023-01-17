@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 body {
   background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
@@ -22,6 +23,37 @@ html {
 input,
 textarea {
   font: inherit;
+}
+
+.marketing {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.marketing .shoe {
+  width: 30%;
+}
+.marketing h2 {
+  width: 60%;
+  font-family: "Heebo", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 160%;
+  color: white;
+}
+.marketing h2 span {
+  color: #2462ea;
+}
+.marketing .baseline_marketing {
+  width: 70%;
+  font-family: "Heebo", sans-serif;
+  color: white;
+  font-size: 50%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
