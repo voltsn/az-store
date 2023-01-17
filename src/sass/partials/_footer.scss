@@ -29,3 +29,11 @@
         color: #fff;
     }
 }
+
+@media screen and (min-width: 1280px) {
+    .footer-main{
+        padding: 3vw;
+        font-size: 1.1rem;
+        padding-bottom: 1vh;
+    }
+}
