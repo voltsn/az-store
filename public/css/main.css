@@ -1,5 +1,9 @@
+body {
+  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+  background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+}
+
 .footer-main {
-  background-color: #1E1E1E;
   padding: 10vw;
 }
 
