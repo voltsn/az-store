@@ -1,9 +1,84 @@
-@forwards "variables";
-@forwards "card";
-@forwards "base";
-@forwards "footer";
-@forwards "reset";
-@forwards "header";
-@forwards "hero";
-@forwards "marketing";
-@forwards "opinions";/*# sourceMappingURL=main.css.map */
+body {
+  background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+}
+
+.footer-main {
+  background-color: #1E1E1E;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+header {
+  height: 30vw;
+  font-family: "Heebo", sans-serif;
+  font-size: 2vw;
+  margin: 5vw;
+  margin-top: 5vw;
+}
+
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-header {
+  width: 15vw;
+  height: 3.5vw;
+}
+
+.ul-nav1 {
+  display: none;
+}
+
+.ul-nav2 {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    height: 30vw;
+    font-family: "Heebo", sans-serif;
+    margin: 5vw;
+    margin-top: 5vw;
+  }
+  nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-header {
+    width: 15vw;
+    height: 4vw;
+  }
+  .ul-nav1 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25vw;
+  }
+  .ul-nav2 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 10vw;
+  }
+  .cart-header {
+    width: 4vw;
+  }
+}/*# sourceMappingURL=main.css.map */
