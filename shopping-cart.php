@@ -5,6 +5,8 @@
     //       Otherwise display: "The cart is empty" msg and disable the Go to checkout button.
     // Todo: When the user clicks the button send them to the checkout page
     // Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
+    // Note: HTML can be generated in php simply using echo:
+    //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php  require "./src/inc/header.php"; ?>
 <section class="card-main">
