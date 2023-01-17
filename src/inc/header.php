@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/partials/header.css">
     <title>AZ store</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Contact</a></li>
                 <li>
-                    <a href="#"><img src="src\img\shopping-cart.svg" alt="Shopping cart"></a>
+                    <a class="cart-header" href="#"><img src="src\img\shopping-cart.svg" alt="Shopping cart"></a>
                     <a href="#">Login</a>
                 </li>
             </ul>
