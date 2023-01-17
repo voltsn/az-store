@@ -69,7 +69,8 @@ html {
 }
 
 input,
-textarea {
+textarea,
+select {
   font: inherit;
 }
 
@@ -146,6 +147,102 @@ textarea {
     font-weight: 300;
   }
 }
+.form-container {
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 32px 20px;
+  position: relative;
+  width: 89%;
+}
+
+.form-header-heading {
+  font-size: clamp(26px, 2vw, 36px);
+  margin-bottom: 23px;
+}
+
+/* || Form Rules */
+.form-control input,
+.form-control textarea {
+  background-color: #ededed;
+  border: none;
+  padding: 9px 16px;
+  width: 100%;
+}
+
+/* For the floating label to work with email input */
+.form-control input[type=email]::placeholder {
+  opacity: 0;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control + .form-control {
+  margin-top: 20px;
+}
+
+.form-control label {
+  background: transparent;
+  position: absolute;
+  left: 16px;
+  top: 9px;
+  transition: transform 150ms ease-in, font-size 150ms ease-in;
+}
+
+.form-control textarea {
+  min-height: 80px;
+}
+
+/* || Label animation */
+.form-control .form-input[type=text]:focus + label,
+.form-control .form-input[type=number]:focus + label,
+.form-control .form-input[type=text]:valid + label,
+.form-control .form-input[type=number]:valid + label,
+.form-control .form-input[type=number]:out-of-range + label {
+  transform: translate(-17px, -25px);
+  background-color: #fff;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.form-control label[for=country] {
+  position: static;
+  margin-right: 1em;
+}
+
+.form-control input[type=email]:not(:placeholder-shown) + label {
+  transform: translate(-17px, -25px);
+  background-color: #fff;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.form-control select {
+  background: #ededed;
+  border: none;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+.form-control .form-input:out-of-range {
+  outline-color: red;
+}
+
+.checkout-submit-btn {
+  background-color: #0061BA;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  margin-top: 23px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
 .main-opinions {
   display: flex;
   flex-direction: column;
