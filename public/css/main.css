@@ -1,11 +1,27 @@
-@forwards "variables";
-@forwards "card";
-@forwards "base";
-@forwards "footer";
-@forwards "reset";
-@forwards "header";
-@forwards "hero";
-@forwards "marketing";
-@forwards "opinions";
+body {
+  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+  background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+}
+
+.footer-main {
+  background-color: #1E1E1E;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  font: inherit;
+}
 
 /*# sourceMappingURL=main.css.map */
