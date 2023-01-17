@@ -36,22 +36,24 @@ nav {
     justify-content: space-between;
 }
 .logo-header {
-    width: 15vw;
-    height:4vw;
+    width: 12vw;
+    height:3vw;
 }
 .ul-nav1 {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     width: 25vw;
+    font-size: 1.5vw;
 }
 .ul-nav2 {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 10vw;
+    width: 8vw;
+    font-size: 1.5vw;
 }
 .cart-header {
-    width: 4vw;
+    width: 3vw;
 }
 }
