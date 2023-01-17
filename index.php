@@ -24,7 +24,7 @@
 <section class="marketing">
     <img class="shoe" src="src\img\shoe_two.png" alt="shoe Nike">
     <h2>We provide you the <span>best</span>quality</h2>
-    <p class="baseline_marketing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aspernatur? Voluptas quae ipsam beatae enim magni ut repudiandae, corrupti earum nam itaque natus.</p>
+    <p class="baseline_marketing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aspernatur? Voluptas quae ipsam beatae.</p>
 </section>
 <div>
     <article>
@@ -43,5 +43,5 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus corporis hic esse et, odio quos eum officia velit, illum ipsam, sed maxime. Eveniet, eius recusandae dolor non quidem animi qui.</p>
     </article>
 </div>
-<?php //require "./src/inc/footer.php"; 
+<?php require "./src/inc/footer.php";
 ?>
