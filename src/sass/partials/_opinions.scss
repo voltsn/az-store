@@ -10,7 +10,9 @@
 }
 
 .img-opinions{
-    border-radius: 5rem;
+    width: 10rem;
+    max-width: 10rem;
+    border-radius: 50%;
 }
 
 .name-opinions{
@@ -22,11 +24,13 @@
 
 .desc-opinions{
     color: #fff;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     font-family: 'Barlow';
+    max-width: 20rem;
+    margin: 0 auto 2.5rem auto;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 60rem) {
     .main-opinions{
         flex-direction: row;
         gap: 10rem;
