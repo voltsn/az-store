@@ -1,12 +1,11 @@
 <?php require "./src/inc/header.php"; ?>
-    <section>
-        <div>
-            <h1>Shoe the right <span>one</span>.</h1>
-            <button>See our store</button>
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero__heading">Shoe the right <span class="accent">one</span>.</h1>
+            <button class="btn hero__btn">See our store</button>
         </div>
-        <div>
-            <img src="" alt="Nike svg">
-            <img src="src\img\shoe_one.png" alt="shoe Nike">
+        <div class="hero__graphic">
+            <img src="src\img\shoe_one.png" class="hero__graphic__img" alt="shoe Nike">
         </div>
     </section>
     <section>
