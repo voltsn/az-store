@@ -7,7 +7,7 @@
     </div>
 
     <div class="form-body">
-        <form method="POST" action="feedback-submit.php">
+        <form method="POST" action="checkout.php">
             <div class="form-control">
                 <input class="form-input" id="firstname" type="text" name="full_name" required>
                 <label for="firstname"> Fisrt Name </label>
@@ -15,7 +15,7 @@
 
             <div class="form-control">
                 <input class="form-input" id="lastname" type="text" name="full_name" required>
-                <label for="lastname"> Fisrt Name </label>
+                <label for="lastname"> Last Name </label>
             </div>
 
             <div class="form-control">
