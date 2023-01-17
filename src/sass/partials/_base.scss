@@ -1,4 +1,18 @@
 body{
     background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
     background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
+    color: #fff;
+    font-family: sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+}
+
+.accent{
+    color: #0061BA;
 }
