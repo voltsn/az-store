@@ -1,3 +1,10 @@
+<?php 
+    // Todo: Include countries and display them in the form
+    // Todo: Display the contents of the cart in checkout-cart div
+    // Todo: If the form has been submitted validate and sanitaze input
+    // Todo: If the data from the form is valid empty the cart and display a succes msg
+    //       instead of the form, if one of the inputs was invalid add a red outline to the input
+?>
 <?php  require "./src/inc/header.php"; ?>
 <article class="form-container">
     <div class="form-header">
@@ -6,7 +13,7 @@
         </h1>
 
         <div class="checkout-cart">
-
+            // The content of the cart goes here
         </div>
     </div>
 
@@ -45,8 +52,9 @@
             <div class="form-control">
                 <label for="country">Country : </label>
                 <select class="form-input" name="country" id="country" required>
-                    <option value="belgium" selected>Belgium</option>
-                    <option value="Germany">Germany</option>
+                    <?php 
+                        // Generate the inputs here
+                    ?>
                 </select>
             </div>
 
