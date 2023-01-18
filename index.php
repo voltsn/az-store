@@ -20,10 +20,9 @@
             <img src="src\img\shoe_one.png" class="hero__graphic__img" alt="shoe Nike">
         </div>
     </section>
-    <section>
+    <section class="carrouselsection">
         <h3<span>Our</span> last products</h2>
         <?php require "./src/inc/carrousel.php"; ?>
-
 </section>
 <section class="marketing">
     <img class="shoe" src="src\img\shoe_two.png" alt="shoe Nike">

@@ -1,15 +1,6 @@
-
-:root {
-    --primary: #ec994b;
-    --white: #ffffff;
-    --bg: #f5f5f5;
-  }
-  
   html {
     font-size: 62.5%;
-    font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
-    background-color: blue;
   }
   
   ::-webkit-scrollbar {
@@ -43,7 +34,7 @@
   
   .section-heading {
     font-size: 3rem;
-    color: var(--primary);
+   // color: var(--primary);
     padding: 2rem 0;
   }
   
@@ -76,14 +67,14 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-    color: var(--white);
+    color: white;
   }
   
   .tranding-slide-content .tranding-slide-content-bottom {
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    color: var(--white);
+    color: white;
   }
   
   .food-rating {
@@ -93,7 +84,7 @@
   }
   
   .rating ion-icon {
-    color: var(--primary);
+    color: #ec994b;
   }
   
   .swiper-slide-shadow-left,
@@ -124,7 +115,7 @@
   }
   
   .tranding-slider-control .slider-arrow {
-    background: var(--white);
+    background: white;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -153,7 +144,7 @@
   }
   
   .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-    background: var(--primary);
+    background: #ec994b;
   }
   
   //-------------------------------------------MQ--------------------------------------------------------------------//
