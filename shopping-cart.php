@@ -37,6 +37,6 @@
         </div>
     </div>
     <p class="total-price">Total: 468€</p>
-    <button class="card-btn">Go to checkout</button>
+    <a class="card-btn" href="checkout.php">Go to checkout</a>
 </section>
 <?php require "./src/inc/footer.php"; ?>
