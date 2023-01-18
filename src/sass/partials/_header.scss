@@ -4,6 +4,7 @@ header {
     font-size: 2vw;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.117);
 }
+
 nav {
     color: white;
     display: flex;
@@ -16,10 +17,37 @@ nav {
 
 .ul-nav1 {
     display: none;
+    
 }
 .ul-nav2 {
     display: none;
 }
+
+#menu{
+    cursor: pointer;
+    flex-direction: end;
+}
+
+// Menu Burger
+.ul-nav1.menumobile, .ul-nav2.menumobile{
+    display: block;
+    list-style: none;
+    text-align: center;
+
+    li{
+        padding: 0.5rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.cart-header{
+    height: 1rem;
+}
+
 
 @media screen and (min-width: 1280px) {
 
@@ -52,5 +80,9 @@ nav {
 }
 .cart-header {
     width: 3vw;
+}
+
+#menu{
+    display: none;
 }
 }
