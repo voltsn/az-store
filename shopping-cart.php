@@ -10,6 +10,7 @@
 ?>
 <?php  require "./src/inc/header.php"; ?>
 <?php  require "./src/inc/panier.php"; ?>
+<?php  require "./src/inc/products.php"; ?>
 <section class="card-main">
     <h2 class="card-title">Your <span>cart</span> (X Articles)</h2>
     <?php // Generate the html for the products here ?>
@@ -32,7 +33,15 @@
             ?> 
             </select>
             <div class="total-card">
-                <p class="card-price">234€</p>
+                <p class="card-price">
+                    <?php
+                      $total = 0;
+                      foreach ($products as $article) {
+                          $total += $article['quantité'] * $article['price'];
+                      }
+                      echo "$total €";
+                    ?>
+                </p>
                 <img src="./public/images/icons/delete 1.svg" alt="" class="card-delete">
             </div>
         </div>
