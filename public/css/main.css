@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap");
 body {
+  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   color: #fff;
   font-family: sans-serif;
@@ -73,6 +74,67 @@ select {
   font: inherit;
 }
 
+header {
+  height: 30vw;
+  font-family: "Heebo", sans-serif;
+  font-size: 2vw;
+  margin: 5vw;
+  margin-top: 5vw;
+}
+
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-header {
+  width: 15vw;
+  height: 3.5vw;
+}
+
+.ul-nav1 {
+  display: none;
+}
+
+.ul-nav2 {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    height: 30vw;
+    font-family: "Heebo", sans-serif;
+    margin: 5vw;
+    margin-top: 5vw;
+  }
+  nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-header {
+    width: 12vw;
+    height: 3vw;
+  }
+  .ul-nav1 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25vw;
+    font-size: 1.5vw;
+  }
+  .ul-nav2 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 8vw;
+    font-size: 1.5vw;
+  }
+  .cart-header {
+    width: 3vw;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
@@ -362,71 +424,50 @@ select {
     padding-top: 5%;
   }
 }
-/*
-    Todo: Responsive header
-    Todo: Carousel
-*/
-
-header {
-  height: 30vw;
-  font-family: "Heebo", sans-serif;
-  font-size: 2vw;
-  margin: 5vw;
-  margin-top: 5vw;
+.products-section {
+  width: 90%;
+  margin: 5rem auto;
 }
 
-nav {
-  color: white;
+.latest-products {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  box-shadow: 0px 12px 7px rgba(0, 0, 0, 0.8);
+  padding: 0.8em;
+  flex-basis: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
   justify-content: space-between;
 }
-
-.logo-header {
-  width: 15vw;
-  height: 3.5vw;
+.product-card .product-image {
+  flex-basis: 80%;
+}
+.product-card .product-name {
+  font-weight: 600;
+}
+.product-card .product-price {
+  color: rgb(126, 126, 126);
+}
+.product-card .add-to-cart-btn {
+  background-color: #0061BA;
+  border: none;
+  color: #fff;
+  padding: 0 0.5em 0 0.5em;
+  border-radius: 10px;
 }
 
-.ul-nav1 {
-  display: none;
-}
-
-.ul-nav2 {
-  display: none;
-}
-
-@media screen and (min-width: 1280px) {
-  header {
-    height: 30vw;
-    font-family: "Heebo", sans-serif;
-    margin: 5vw;
-    margin-top: 5vw;
-  }
-  nav {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo-header {
-    width: 12vw;
-    height: 3vw;
-  }
-  .ul-nav1 {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 25vw;
-    font-size: 1.5vw;
-  }
-  .ul-nav2 {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 8vw;
-    font-size: 1.5vw;
-  }
-  .cart-header {
-    width: 3vw;
-  }
-} /*# sourceMappingURL=main.css.map */
+/*
+    Todo: Responsive header (Burger menu)
+    Todo: Adjust the spacing between the header and the hero section
+    Todo: Carousel
+*/
 
 /*# sourceMappingURL=main.css.map */

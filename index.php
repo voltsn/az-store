@@ -20,15 +20,55 @@
             <img src="src\img\shoe_one.png" class="hero__graphic__img" alt="shoe Nike">
         </div>
     </section>
-    <section>
-        <h3<span>Our</span> last products</h2>
-        <div>
-            <div>
-                <img src="src\img\shoe_one.png" alt="shoe Nike">
-                <p>NIKE Air</p>
-                <p>234€</p>
-                <button>Add to card</button>
-            </div>
+    <section class="products-section">
+        <h2> <span class="accent">Our</span> last products</h2>
+        <div class="latest-products">
+            <article class="product-card">
+                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
+                <div>
+                    <p class="product-name">NIKE Air</p>
+                    <p class="product-price">234€</p>
+                </div>
+                <button class="add-to-cart-btn">Add to card</button>
+            </article>
+
+            <article class="product-card">
+                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
+                <div>
+                    <p class="product-name">NIKE Air</p>
+                    <p class="product-price">234€</p>
+                </div>
+                <button class="add-to-cart-btn">Add to card</button>
+            </article>
+
+
+            <article class="product-card">
+                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
+                <div>
+                    <p class="product-name">NIKE Air</p>
+                    <p class="product-price">234€</p>
+                </div>
+                <button class="add-to-cart-btn">Add to card</button>
+            </article>
+
+            <article class="product-card">
+                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
+                <div>
+                    <p class="product-name">NIKE Air</p>
+                    <p class="product-price">234€</p>
+                </div>
+                <button class="add-to-cart-btn">Add to card</button>
+            </article>
+
+
+            <article class="product-card">
+                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
+                <div>
+                    <p class="product-name">NIKE Air</p>
+                    <p class="product-price">234€</p>
+                </div>
+                <button class="add-to-cart-btn">Add to card</button>
+            </article>
         </div>
 </section>
 <section class="marketing">
