@@ -1,7 +1,8 @@
 <?php 
-    // Todo: Start a session
-    // Todo: Include the products array 
-    // Todo: Add the products in the UI
+    require "./src/inc/cart.php";
+    session_start();
+    $_SESSION['cart'] = new Cart();
+
     // Todo: Update the cart when the user clicks on either the add or the remove button
     //       Idea: perhaps create a javscript file containing one or more asyncronus functions
     //             that make a post request using the fetch api, to another php page 
@@ -23,52 +24,21 @@
     <section class="products-section">
         <h2> <span class="accent">Our</span> last products</h2>
         <div class="latest-products">
-            <article class="product-card">
-                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
-                <div>
-                    <p class="product-name">NIKE Air</p>
-                    <p class="product-price">234€</p>
-                </div>
-                <button class="add-to-cart-btn">Add to card</button>
-            </article>
-
-            <article class="product-card">
-                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
-                <div>
-                    <p class="product-name">NIKE Air</p>
-                    <p class="product-price">234€</p>
-                </div>
-                <button class="add-to-cart-btn">Add to card</button>
-            </article>
-
-
-            <article class="product-card">
-                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
-                <div>
-                    <p class="product-name">NIKE Air</p>
-                    <p class="product-price">234€</p>
-                </div>
-                <button class="add-to-cart-btn">Add to card</button>
-            </article>
-
-            <article class="product-card">
-                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
-                <div>
-                    <p class="product-name">NIKE Air</p>
-                    <p class="product-price">234€</p>
-                </div>
-                <button class="add-to-cart-btn">Add to card</button>
-            </article>
-
-
-            <article class="product-card">
-                <img class="product-image" src="src\img\shoe_one.png" alt="shoe Nike">
-                <div>
-                    <p class="product-name">NIKE Air</p>
-                    <p class="product-price">234€</p>
-                </div>
-                <button class="add-to-cart-btn">Add to card</button>
-            </article>
+            <?php 
+                require "./src/inc/products.php";
+                foreach($products as $product){
+                    echo "
+                        <article class='product-card' data-product-id=$product[id]>
+                            <img class='product-image' src='$product[img]' alt='$product[alt]'>
+                            <div>
+                                <p class='product-name'>$product[name]</p>
+                                <p class='product-price'>$product[price]€</p>
+                            </div>
+                            <button class='add-to-cart-btn'>Add to card</button>
+                        </article>
+                    ";
+                }
+            ?>
         </div>
 </section>
 <section class="marketing">
