@@ -8,6 +8,7 @@
     & > div{
         width: 50%;
     }
+
     .hero__heading{
         text-transform: uppercase;
         font-size: clamp(1.5625rem, 0.3521rem + 5.1643vw, 5rem);
@@ -21,6 +22,22 @@
         font-weight: 600;
         font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
         margin-top: 1em;
+    }
+
+    .hero__graphic{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4, 1fr);
+
+        .hero__graphic__nike{
+            grid-column: 1 / 5;
+            grid-row: 1;
+        }
+
+        .hero__graphic__shoe{
+            grid-column: 1 / 5;
+            grid-row: 1;
+        }
     }
     
 }

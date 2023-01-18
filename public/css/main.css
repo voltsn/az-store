@@ -180,6 +180,19 @@ nav ul li > a {
   font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
   margin-top: 1em;
 }
+.hero .hero__graphic {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.hero .hero__graphic .hero__graphic__nike {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.hero .hero__graphic .hero__graphic__shoe {
+  grid-column: 1/5;
+  grid-row: 1;
+}
 
 .marketing {
   width: 100%;
