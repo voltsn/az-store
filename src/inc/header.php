@@ -6,24 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet">
     <title>AZ store</title>
     <link rel="shortcut icon" href="src\img\favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <img class="logo" src="src\img\AZstore_1.png" alt="Logo white AZ store">
-        <nav class="different_pages">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-                <li>
-                    <a href="#"><img src="src\img\shopping-cart.svg" alt="Shopping cart"></a>
-                    <a href="#">Login</a>
-                </li>
+        <nav>
+            <img class="logo-header" src="src\img\AZstore_1.png" alt="Logo white AZ store">
+            <ul class="ul-nav1">
+                <li>Home</a></li>
+                <li>About</a></li>
+                <li>Products</a></li>
+                <li>Contact</a></li>
             </ul>
+            <ul class="ul-nav2">
+                <li><img class="cart-header" src="src\img\shopping-cart.svg" alt="Shopping cart"></li>
+                <li>Login</li>
+            </ul>
+
         </nav>
     </header>
     <main>
