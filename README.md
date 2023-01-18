@@ -44,4 +44,4 @@ The shopping cart should be able to add and remove products. The shopping cart s
 
 ## Group
 
-Arno, Dominique, Mathilde , Marnie Benalia, Milo
+Arno, Dominique, [Mathilde](https://github.com/MathildeCornelis) , Marnie Benalia, Milo
