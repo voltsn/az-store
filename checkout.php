@@ -1,5 +1,5 @@
 <?php 
-    // Todo: Include the country array and display them in the form
+    include "./src/inc/country.php";
     // Todo: Using $_SESSION retrieve the products from the cart and
     //       display the contents of the cart in checkout-cart div
     // Todo: If the form has been submitted (through POST) validate and sanitaze input
@@ -58,6 +58,11 @@
                 <select class="form-input" name="country" id="country" required>
                     <?php 
                         // Generate the options here
+                        foreach($countries as $country){
+                            echo "
+                                <option value='$country'>$country</option>
+                            ";
+                        }
                     ?>
                 </select>
             </div>
