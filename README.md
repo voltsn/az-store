@@ -44,4 +44,4 @@ The shopping cart should be able to add and remove products. The shopping cart s
 
 ## Group
 
-Arno, [Dominique](https://github.com/DCoppee), [Mathilde](https://github.com/MathildeCornelis) , Marnie Benalia, Milo
+[Arno](https://github.com/voltsn), [Dominique](https://github.com/DCoppee), [Mathilde](https://github.com/MathildeCornelis) , [Marnie Benalia](https://github.com/MarnieBenalia), [Milo](https://github.com/Milo-star)
