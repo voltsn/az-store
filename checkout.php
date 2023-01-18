@@ -1,7 +1,7 @@
 <?php 
-    // Todo: Include the country array and display them in the form ---DONE
-    // Todo: Using $_SESSION retrieve the products from the cart ---DONE 
-    //       and display the contents of the cart in checkout-cart div
+    include "./src/inc/country.php";
+    // Todo: Using $_SESSION retrieve the products from the cart and
+    //       display the contents of the cart in checkout-cart div
     // Todo: If the form has been submitted (through POST) validate and sanitaze input
     // Todo: If the data from the form is valid empty the cart and display a succes msg
     //       instead of the form, if one of the inputs was invalid add a red outline to the input
