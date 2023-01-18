@@ -9,6 +9,7 @@
     //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php  require "./src/inc/header.php"; ?>
+<?php  require "./src/inc/panier.php"; ?>
 <section class="card-main">
     <h2 class="card-title">Your <span>cart</span> (X Articles)</h2>
     <?php // Generate the html for the products here ?>
@@ -16,8 +17,20 @@
         <img src="./public/images/products/shoe_two.png" alt="Chaussure AirMax" class="card-img">
         <div class="info-card">
             <p class="card-name">NIKE AIR</p>
-            <select name="" id=""></select>
-            <select name="" id=""></select>
+            <select name="" id="">
+            <?php
+                foreach ($amount as $p) {
+                    echo "<option value='$p'>$p</option>";
+                }
+            ?> 
+            </select>
+            <select name="" id=""">
+            <?php
+                foreach ($taille as $p) {
+                    echo "<option value='$p'>$p</option>";
+                }
+            ?> 
+            </select>
             <div class="total-card">
                 <p class="card-price">234€</p>
                 <img src="./public/images/icons/delete 1.svg" alt="" class="card-delete">
@@ -28,8 +41,20 @@
         <img src="./public/images/products/shoe_two.png" alt="Chaussure AirMax" class="card-img">
         <div class="info-card">
             <p class="card-name">NIKE AIR</p>
-            <select name="" id=""></select>
-            <select name="" id=""></select>
+            <select name="" id="">
+            <?php
+                foreach ($amount as $p) {
+                    echo "<option value='$p'>$p</option>";
+                }
+            ?> 
+            </select>
+            <select name="" id=""">
+            <?php
+                foreach ($taille as $p) {
+                    echo "<option value='$p'>$p</option>";
+                }
+            ?> 
+            </select>
             <div class="total-card">
                 <p class="card-price">234€</p>
                 <img src="./public/images/icons/delete 1.svg" alt="" class="card-delete">
