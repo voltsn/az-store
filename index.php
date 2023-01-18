@@ -22,14 +22,8 @@
     </section>
     <section>
         <h3<span>Our</span> last products</h2>
-        <div>
-            <div>
-                <img src="src\img\shoe_one.png" alt="shoe Nike">
-                <p>NIKE Air</p>
-                <p>234€</p>
-                <button>Add to card</button>
-            </div>
-        </div>
+        <?php require "./src/inc/carrousel.php"; ?>
+
 </section>
 <section class="marketing">
     <img class="shoe" src="src\img\shoe_two.png" alt="shoe Nike">
