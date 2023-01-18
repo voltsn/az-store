@@ -74,6 +74,67 @@ select {
   font: inherit;
 }
 
+header {
+  height: 30vw;
+  font-family: "Heebo", sans-serif;
+  font-size: 2vw;
+  margin: 5vw;
+  margin-top: 5vw;
+}
+
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-header {
+  width: 15vw;
+  height: 3.5vw;
+}
+
+.ul-nav1 {
+  display: none;
+}
+
+.ul-nav2 {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    height: 30vw;
+    font-family: "Heebo", sans-serif;
+    margin: 5vw;
+    margin-top: 5vw;
+  }
+  nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-header {
+    width: 12vw;
+    height: 3vw;
+  }
+  .ul-nav1 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25vw;
+    font-size: 1.5vw;
+  }
+  .ul-nav2 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 8vw;
+    font-size: 1.5vw;
+  }
+  .cart-header {
+    width: 3vw;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
@@ -364,7 +425,8 @@ select {
   }
 }
 /*
-    Todo: Responsive header
+    Todo: Responsive header (Burger menu)
+    Todo: Adjust the spacing between the header and the hero section
     Todo: Carousel
 */
 

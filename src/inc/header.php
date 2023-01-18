@@ -9,11 +9,11 @@
     <title>AZ store</title>
     <link rel="shortcut icon" href="src\img\favicon.png" type="image/x-icon">
 </head>
-<!--
+
 <body>
     <header>
-        <img src="src\img\AZstore_1.png" alt="Logo white AZ store">
-        <nav>
+        <img class="logo" src="src\img\AZstore_1.png" alt="Logo white AZ store">
+        <nav class="different_pages">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -26,5 +26,4 @@
             </ul>
         </nav>
     </header>
-    -->
-<main>
+    <main>
