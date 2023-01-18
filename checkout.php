@@ -9,6 +9,26 @@
     // Note: HTML can be generated in php simply using echo:
     //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
+<?php
+            // If the form has been submitted (through POST) validate and sanitaze input
+            
+    if(isset($_POST["submit"])) {
+        $inputs = array(
+            "email" => FILTER_VALIDATE_EMAIL,
+            "firstname" => FILTER_SANITIZE_STRING,
+            "lastname" => FILTER_SANITIZE_STRING,
+            "address" => FILTER_SANITIZE_STRING,
+            "city" => FILTER_SANITIZE_STRING
+);
+            
+// Appliquer les fonctions de sanitisation aux entrées
+    foreach($inputs as $input => $sanitize) {
+        if(isset($_POST[$input])) {
+        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+        }
+    }
+ }?>
+ 
 <?php require "./src/inc/header.php"; ?>
 <article class="form-container">
     <div class="form-header">
@@ -120,27 +140,8 @@
             </div>
 
             <button class="checkout-submit-btn" type="submit">Send</button>
-            <?php
-            // If the form has been submitted (through POST) validate and sanitaze input
-            
-            if(isset($_POST["submit"])) {
-                $inputs = array(
-                    "email" => FILTER_VALIDATE_EMAIL,
-                    "firstname" => FILTER_SANITIZE_STRING,
-                    "lastname" => FILTER_SANITIZE_STRING,
-                    "address" => FILTER_SANITIZE_STRING,
-                    "city" => FILTER_SANITIZE_STRING
-                );
-            
-                // Appliquer les fonctions de sanitisation aux entrées
-                foreach($inputs as $input => $sanitize) {
-                    if(isset($_POST[$input])) {
-                        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
-                    }
-                }
-            }?>
+
         </form>
     </div>
 </article>
 <?php require "./src/inc/footer.php"; ?>
-
