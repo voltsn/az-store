@@ -20,22 +20,23 @@
             // Using $_SESSION retrieve the products from the cart and display the contents of the cart in checkout-cart div
             // Storing the product when added to the cart in a session variable (array).
             session_start(); // Starting the session before accessing the session variable
+            $produits = NULL;
             if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = array();
+            
             }
-            $_SESSION['cart'][] = array(
-                'shoes_name' => $shoes_name,
-                'shoes_id' => $shoes_id,
-                'shoes_price' => $shoes_price,
-                'quantity' => $quantity
-            );
+            else {
+                $produits = $_SESSION["cart"];
+            }
             ?>
-            // Display the content of the cart here, by using a loop to browse the session array and generate the contents of the div.
         <div class="checkout-cart">
         <?php
-        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-            foreach ($_SESSION['cart'] as $item) {
-                // ici, je cale
+        // Display the content of the cart here, by using a loop to browse the session array and generate the contents of the div.
+        if ($produits) {
+            foreach ($produits as $item) {
+                echo "<p> $item[name] </p>
+                <p> $item[size] </p>
+                <p> $item[quantity] </p>
+                <p> $item[price] </p>"
             }
         } else {
             echo '<p>Your cart is empty.</p>';
