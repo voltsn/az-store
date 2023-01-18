@@ -19,7 +19,7 @@
         <nav class="header-nav">
         <img class="logo-header" src="src\img\AZstore_1.png" alt="Logo white AZ store">
             <ul class="ul-nav1">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Contact</a></li>
