@@ -5,7 +5,7 @@
   
   ::-webkit-scrollbar {
     width: 1.3rem;
-  }
+ }
   
   ::-webkit-scrollbar-thumb {
     border-radius: 1rem;
@@ -32,14 +32,15 @@
     margin: 0 auto;
   }
   
-  .section-heading {
+  /*.section-heading {
     font-size: 3rem;
-   // color: var(--primary);
+   color: var(--primary);
     padding: 2rem 0;
-  }
+  }*/
   
   #tranding { //id de la section
     padding: 4rem 0;
+
   }
   
   #tranding .tranding-slider {

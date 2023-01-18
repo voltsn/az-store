@@ -24,6 +24,7 @@
                       <ion-icon name="star"></ion-icon>
                     </div>
                   </h3>
+                  <button type= "submit" class="buttonadd">Add product</button>
                 </div>
               </div>
             </div>
@@ -47,6 +48,7 @@
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                     </div>
+                    <button type= "submit" class="buttonadd">Add product</button>
                   </h3>
                 </div>
               </div>
@@ -70,6 +72,7 @@
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                     </div>
+                    <button type= "submit" class="buttonadd">Add product</button>
                   </h3>
                 </div>
               </div>

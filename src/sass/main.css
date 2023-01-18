@@ -476,11 +476,11 @@ body {
   margin: 0 auto;
 }
 
-.section-heading {
+/*.section-heading {
   font-size: 3rem;
+ color: var(--primary);
   padding: 2rem 0;
-}
-
+}*/
 #tranding {
   padding: 4rem 0;
 }
