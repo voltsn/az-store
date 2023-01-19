@@ -1,7 +1,8 @@
 <?php 
-    // Todo: Start a session
-    // Todo: Include the products array 
-    // Todo: Add the products in the UI
+    require "./src/inc/cart.php";
+    session_start();
+    $_SESSION['cart'] = new Cart();
+
     // Todo: Update the cart when the user clicks on either the add or the remove button
     //       Idea: perhaps create a javscript file containing one or more asyncronus functions
     //             that make a post request using the fetch api, to another php page 
@@ -17,18 +18,28 @@
             <button class="btn hero__btn">See our store</button>
         </div>
         <div class="hero__graphic">
-            <img src="src\img\shoe_one.png" class="hero__graphic__img" alt="shoe Nike">
+            <img src="public/images/icons/Nike.svg" class="hero__graphic__nike" alt="Nike logo">
+            <img src="public/images/products/shoe_one.png" class="hero__graphic__shoe" alt="shoe Nike">
         </div>
     </section>
-    <section>
-        <h3<span>Our</span> last products</h2>
-        <div>
-            <div>
-                <img src="src\img\shoe_one.png" alt="shoe Nike">
-                <p>NIKE Air</p>
-                <p>234€</p>
-                <button>Add to card</button>
-            </div>
+    <section class="products-section">
+        <h2> <span class="accent">Our</span> last products</h2>
+        <div class="latest-products">
+            <?php 
+                require "./src/inc/products.php";
+                foreach($products as $product){
+                    echo "
+                        <article class='product-card' data-product-id=$product[id]>
+                            <img class='product-image' src='$product[img]' alt='$product[alt]'>
+                            <div>
+                                <p class='product-name'>$product[name]</p>
+                                <p class='product-price'>$product[price]€</p>
+                            </div>
+                            <button class='add-to-cart-btn'>Add to card</button>
+                        </article>
+                    ";
+                }
+            ?>
         </div>
 </section>
 <section class="marketing">
