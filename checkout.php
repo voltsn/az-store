@@ -12,7 +12,7 @@
 <?php
             // If the form has been submitted (through POST) validate and sanitaze input
             
-    if(isset($_POST["submit"])) {
+    /*if(isset($_POST["submit"])) {
         $inputs = array(
             "email" => ($_POST["email"]),
             "firstname" => ($_POST["firstname"]),
@@ -22,12 +22,13 @@
         );
             
 // Appliquer les fonctions de sanitisation aux entrées
-    foreach($inputs as $input => $sanitize) {
-        if(isset($_POST[$input])) {
-        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+        foreach($inputs as $input => $sanitize) {
+            if(isset($_POST[$input])) {
+                $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+            }
         }
-    }
- }?>
+    }*/
+    ?>
  
 <?php require "./src/inc/header.php"; ?>
 <article class="form-container">
@@ -136,7 +137,6 @@
                     }
                     ?>
                 </select>
-                </select>
             </div>
 
             <button class="checkout-submit-btn" type="submit">Send</button>
@@ -151,44 +151,44 @@
                     "zipcode" => ($_POST["zipcode"])
                 );
 
-            function sanitize( $inputs ){
-                return strip_tags( trim( $inputs) );
-            }   
+                function sanitize( $inputs ){
+                    return strip_tags( trim( $inputs) );
+                }   
             
-            // This condition checks if form is submitted
-            if (isset($_POST) && !empty($_POST) ){
+                // This condition checks if form is submitted
+                if (isset($_POST) && !empty($_POST) ){
 
-	            // input sanitization
+	                // input sanitization
 
-	            $email = filter_var( $_POST['email'] );
-                $firstname = sanitize( $_POST['firstname'] );
-                $lastname = sanitize( $_POST['lastname'] );
-                $address = sanitize( $_POST['address'] );
-                $zipcode = is_numeric( $_POST['zipcode'] );
+	                $email = filter_var( $_POST['email'] );
+                    $firstname = sanitize( $_POST['firstname'] );
+                    $lastname = sanitize( $_POST['lastname'] );
+                    $address = sanitize( $_POST['address'] );
+                    $zipcode = is_numeric( $_POST['zipcode'] );
 
-	            // validation...
+	                // validation...
 	        
-                if ($email == FALSE) {
-                    $inputs['email'] = 'Invalid email';
-                }
-                else if ($firstname == FALSE) {
-                    $inputs['firstname'] = 'Invalid firstname';
-                }
-                else if ($lastname == FALSE) {
-                    $inputs['lastname'] = 'Invalid lastname';
-                }
-                else if ($address == FALSE) {
-                    $inputs['address'] = 'Invalid address';
-                }
-                else if ($zipcode == FALSE) {
-                    $inputs['zipcode'] = 'Invalid zipcode';
-                }
-                else {
-                    echo "Successfully submitted form."
-                }
+                    if ($email == FALSE) {
+                        $inputs['email'] = 'Invalid email';
+                    }
+                    else if ($firstname == FALSE) {
+                        $inputs['firstname'] = 'Invalid firstname';
+                    }
+                    else if ($lastname == FALSE) {
+                        $inputs['lastname'] = 'Invalid lastname';
+                    }
+                    else if ($address == FALSE) {
+                        $inputs['address'] = 'Invalid address';
+                    }
+                    else if ($zipcode == FALSE) {
+                        $inputs['zipcode'] = 'Invalid zipcode';
+                    }
+                    else {
+                        echo "Successfully submitted form.";
+                    }
             }         
             ?>
-            </form>
+        </form>
     </div>
 </article>
 <?php require "./src/inc/footer.php"; ?>
