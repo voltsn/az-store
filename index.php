@@ -1,15 +1,7 @@
 <?php 
+    require "./src/inc/products.php";
     require "./src/inc/cart.php";
     session_start();
-    $_SESSION['cart'] = new Cart();
-
-    // Todo: Update the cart when the user clicks on either the add or the remove button
-    //       Idea: perhaps create a javscript file containing one or more asyncronus functions
-    //             that make a post request using the fetch api, to another php page 
-    //             containing a script that updates the cart that is stored in $_SESSION.
-    //             In this particual scenario a new php file should be created
-    // Note: HTML can be generated in php simply using echo:
-    //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php require "./src/inc/header.php"; ?>
     <section class="hero">
@@ -22,7 +14,7 @@
             <img src="public/images/products/shoe_one.png" class="hero__graphic__shoe" alt="shoe Nike">
         </div>
     </section>
-    <section class="products-section">
+    <section class="products-section" id="products-section">
         <h2> <span class="accent">Our</span> last products</h2>
         <div class="latest-products">
             <?php 
@@ -35,7 +27,7 @@
                                 <p class='product-name'>$product[name]</p>
                                 <p class='product-price'>$product[price]€</p>
                             </div>
-                            <button class='add-to-cart-btn'>Add to card</button>
+                            <a href='./update-cart.php/?id=$product[id]' class='add-to-cart-btn'>Add to card</a>
                         </article>
                     ";
                 }
