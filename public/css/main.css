@@ -22,6 +22,7 @@ button {
 
 .footer-main {
   padding: 10vw;
+  margin-bottom: 2em;
 }
 
 .footer-copyright {
@@ -44,10 +45,15 @@ button {
 .footer-link-git {
   list-style: none;
 }
-
 .footer-link-git a {
   text-decoration: none;
   color: #fff;
+}
+.footer-link-git a:hover {
+  color: #2462ea;
+}
+.footer-link-git img:hover {
+  color: #2462ea;
 }
 
 @media screen and (min-width: 1280px) {
@@ -98,6 +104,7 @@ nav ul li > a {
 
 .ul-nav1 {
   display: none;
+  justify-content: flex-end;
 }
 
 .ul-nav2 {
@@ -106,20 +113,39 @@ nav ul li > a {
 
 #menu {
   cursor: pointer;
-  flex-direction: end;
 }
 
 .ul-nav1.menumobile, .ul-nav2.menumobile {
-  display: block;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-top: 9%;
+  width: 100%;
+  font-weight: 600;
+  padding: 2%;
+  position: absolute;
   list-style: none;
   text-align: center;
 }
 .ul-nav1.menumobile li, .ul-nav2.menumobile li {
   padding: 0.5rem;
+  width: 100%;
+}
+.ul-nav1.menumobile .login, .ul-nav2.menumobile .login {
+  display: flex;
+  padding-left: 43%;
+  flex-direction: row;
+  color: white;
 }
 
 .cart-header {
-  height: 1rem;
+  width: auto;
+  height: 1.3em;
+  padding-left: 4%;
 }
 
 @media screen and (min-width: 48.75rem) {
@@ -140,7 +166,7 @@ nav ul li > a {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 25vw;
+    width: 30em;
     font-size: 1.5vw;
   }
   .ul-nav2 {
@@ -151,10 +177,17 @@ nav ul li > a {
     font-size: 1.5vw;
   }
   .cart-header {
-    width: 3vw;
+    position: absolute;
+    height: 1.3em;
+  }
+  .cart-header:hover {
+    color: #2462ea;
   }
   #menu {
     display: none;
+  }
+  a:hover {
+    color: #2462ea;
   }
 }
 .hero {
@@ -164,16 +197,13 @@ nav ul li > a {
   max-width: 90rem;
   margin: 0 auto;
 }
-
 .hero > div {
   width: 50%;
 }
-
 .hero .hero__heading {
   text-transform: uppercase;
   font-size: clamp(1.5625rem, 0.3521rem + 5.1643vw, 5rem);
 }
-
 .hero .hero__btn {
   background: linear-gradient(90deg, #49A8FF 0%, #007CEE 100%);
   border: none;
@@ -208,11 +238,9 @@ nav ul li > a {
   align-items: center;
   margin-bottom: 5rem;
 }
-
 .marketing .shoe {
   width: 30%;
 }
-
 .marketing h2 {
   width: 60%;
   font-family: "Heebo", sans-serif;
@@ -222,11 +250,9 @@ nav ul li > a {
   line-height: 100%;
   color: white;
 }
-
 .marketing h2 span {
   color: #2462ea;
 }
-
 .marketing .baseline_marketing {
   width: 70%;
   padding-top: 2%;
@@ -276,14 +302,6 @@ nav ul li > a {
 }
 
 /* For the floating label to work with email input */
-.form-control input[type=email]::-moz-placeholder {
-  opacity: 0;
-}
-
-.form-control input[type=email]:-ms-input-placeholder {
-  opacity: 0;
-}
-
 .form-control input[type=email]::placeholder {
   opacity: 0;
 }
@@ -323,20 +341,6 @@ nav ul li > a {
 .form-control label[for=country] {
   position: static;
   margin-right: 1em;
-}
-
-.form-control input[type=email]:not(:-moz-placeholder-shown) + label {
-  transform: translate(-17px, -25px);
-  background-color: #fff;
-  padding: 4px;
-  font-size: 12px;
-}
-
-.form-control input[type=email]:not(:-ms-input-placeholder) + label {
-  transform: translate(-17px, -25px);
-  background-color: #fff;
-  padding: 4px;
-  font-size: 12px;
 }
 
 .form-control input[type=email]:not(:placeholder-shown) + label {
@@ -430,7 +434,6 @@ nav ul li > a {
   margin-bottom: 3rem;
   font-family: "Heebo";
 }
-
 .card-title span {
   color: blue;
 }
@@ -486,71 +489,64 @@ nav ul li > a {
     padding-top: 5%;
   }
 }
+.products-section {
+  width: 90%;
+  max-width: 90rem;
+  margin: 5rem auto;
+}
+
+.latest-products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.5);
+  padding: 0.8em;
+  flex-basis: 15rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  transition: transform 500ms ease-in-out;
+}
+.product-card > div {
+  grid-column: span 2;
+}
+.product-card:hover {
+  transform: scale(1.1);
+}
+.product-card .product-image {
+  justify-self: center;
+  grid-column: span 4;
+  width: 10rem;
+}
+.product-card .product-name {
+  font-weight: 600;
+}
+.product-card .product-price {
+  color: rgb(126, 126, 126);
+}
+.product-card .add-to-cart-btn {
+  background-color: #0061BA;
+  border: none;
+  color: #fff;
+  padding: 0 0.5em 0 0.5em;
+  border-radius: 10px;
+  grid-column: 3/5;
+}
+.product-card .add-to-cart-btn:hover {
+  background-color: #fff;
+  color: #0061BA;
+}
+
 /*
-    Todo: Responsive header
+    Todo: Responsive header (Burger menu)
+    Todo: Adjust the spacing between the header and the hero section
     Todo: Carousel
 */
-
-header {
-  height: 30vw;
-  font-family: "Heebo", sans-serif;
-  font-size: 2vw;
-  margin: 5vw;
-  margin-top: 5vw;
-}
-
-nav {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo-header {
-  width: 15vw;
-  height: 3.5vw;
-}
-
-.ul-nav1 {
-  display: none;
-}
-
-.ul-nav2 {
-  display: none;
-}
-
-@media screen and (min-width: 1280px) {
-  header {
-    height: 30vw;
-    font-family: "Heebo", sans-serif;
-    margin: 5vw;
-    margin-top: 5vw;
-  }
-  nav {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo-header {
-    width: 12vw;
-    height: 3vw;
-  }
-  .ul-nav1 {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 25vw;
-    font-size: 1.5vw;
-  }
-  .ul-nav2 {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 8vw;
-    font-size: 1.5vw;
-  }
-  .cart-header {
-    width: 3vw;
-  }
-} /*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
