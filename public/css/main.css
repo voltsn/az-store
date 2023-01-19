@@ -135,17 +135,10 @@ nav ul li > a {
   padding: 0.5rem;
   width: 100%;
 }
-.ul-nav1.menumobile .login, .ul-nav2.menumobile .login {
-  display: flex;
-  padding-left: 43%;
-  flex-direction: row;
-  color: white;
-}
 
 .cart-header {
   width: auto;
   height: 1.3em;
-  padding-left: 4%;
 }
 
 @media screen and (min-width: 48.75rem) {

@@ -48,24 +48,16 @@ nav {
     position:absolute;
     list-style: none;
     text-align: center;
-
     li{
         padding: 0.5rem;
-        //border-bottom: 1px solid rgba(255, 255, 255, 0.788);
         width:100%;
-    }
-    .login{
-        display: flex;
-        padding-left: 43%;
-        flex-direction: row;
-        color:white;
     }
 }
 
 .cart-header{
+
     width: auto;
     height: 1.3em;
-    padding-left:4%;
 }
 
 

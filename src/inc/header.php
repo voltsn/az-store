@@ -28,7 +28,7 @@
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Contact</a></li>
                 <li class="login"><a href="#">Login</a></li>
-                <li><a href="#">Panier <img class="cart-header"src="src\img\shopping-cart.svg" alt="Shopping cart"></a></li>
+                <li><a href="#"><img class="cart-header"src="src\img\shopping-cart.svg" alt="Shopping cart"></a></li>
                 </ul><ul class="ul-nav2"></ul>
             <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg" id="menu"><path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/></svg>
 
