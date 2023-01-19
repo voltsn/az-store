@@ -14,12 +14,12 @@
             
     if(isset($_POST["submit"])) {
         $inputs = array(
-            "email" => FILTER_VALIDATE_EMAIL,
-            "firstname" => FILTER_SANITIZE_STRING,
-            "lastname" => FILTER_SANITIZE_STRING,
-            "address" => FILTER_SANITIZE_STRING,
-            "city" => FILTER_SANITIZE_STRING
-);
+            "email" => ($_POST["email"]),
+            "firstname" => ($_POST["firstname"]),
+            "lastname" => ($_POST["lastname"]),
+            "address" => ($_POST["address"]),
+            "zipcode" => ($_POST["zipcode"])
+        );
             
 // Appliquer les fonctions de sanitisation aux entrées
     foreach($inputs as $input => $sanitize) {
@@ -140,8 +140,55 @@
             </div>
 
             <button class="checkout-submit-btn" type="submit">Send</button>
+            
+            <?php
+            if(isset($_POST["submit"])) {
+                $inputs = array(
+                    "email" => ($_POST["email"]),
+                    "firstname" => ($_POST["firstname"]),
+                    "lastname" => ($_POST["lastname"]),
+                    "address" => ($_POST["address"]),
+                    "zipcode" => ($_POST["zipcode"])
+                );
 
-        </form>
+            function sanitize( $inputs ){
+                return strip_tags( trim( $inputs) );
+            }   
+            
+            // This condition checks if form is submitted
+            if (isset($_POST) && !empty($_POST) ){
+
+	            // input sanitization
+
+	            $email = filter_var( $_POST['email'] );
+                $firstname = sanitize( $_POST['firstname'] );
+                $lastname = sanitize( $_POST['lastname'] );
+                $address = sanitize( $_POST['address'] );
+                $zipcode = is_numeric( $_POST['zipcode'] );
+
+	            // validation...
+	        
+                if ($email == FALSE) {
+                    $inputs['email'] = 'Invalid email';
+                }
+                else if ($firstname == FALSE) {
+                    $inputs['firstname'] = 'Invalid firstname';
+                }
+                else if ($lastname == FALSE) {
+                    $inputs['lastname'] = 'Invalid lastname';
+                }
+                else if ($address == FALSE) {
+                    $inputs['address'] = 'Invalid address';
+                }
+                else if ($zipcode == FALSE) {
+                    $inputs['zipcode'] = 'Invalid zipcode';
+                }
+                else {
+                    echo "Successfully submitted form."
+                }
+            }         
+            ?>
+            </form>
     </div>
 </article>
 <?php require "./src/inc/footer.php"; ?>
