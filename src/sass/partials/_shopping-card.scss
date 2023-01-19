@@ -58,6 +58,7 @@
     border: none;
     font-weight: bold;
     font-family: 'Heebo';
+    text-decoration: none;
 
 }
 
@@ -70,11 +71,6 @@
 .card-delete{
     height: 1.2rem;
     cursor: pointer;
-}
-
-.total-card{
-    display: flex;
-    gap: 1rem;
 }
 
 @media screen and (min-width: 1280px) {

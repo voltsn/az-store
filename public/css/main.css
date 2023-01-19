@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap");
 body {
+  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   color: #fff;
   font-family: sans-serif;
@@ -75,22 +76,24 @@ select {
 }
 
 header {
-  height: 30vw;
+  padding: 5% 5% 2% 5%;
   font-family: "Heebo", sans-serif;
   font-size: 2vw;
-  margin: 5vw;
-  margin-top: 5vw;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.117);
 }
 
 nav {
-  color: white;
   display: flex;
   justify-content: space-between;
 }
+nav ul li > a {
+  color: white;
+  text-decoration: none;
+}
 
 .logo-header {
-  width: 15vw;
-  height: 3.5vw;
+  width: 25vw;
+  height: 6vw;
 }
 
 .ul-nav1 {
@@ -101,12 +104,28 @@ nav {
   display: none;
 }
 
-@media screen and (min-width: 1280px) {
+#menu {
+  cursor: pointer;
+  flex-direction: end;
+}
+
+.ul-nav1.menumobile, .ul-nav2.menumobile {
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+.ul-nav1.menumobile li, .ul-nav2.menumobile li {
+  padding: 0.5rem;
+}
+
+.cart-header {
+  height: 1rem;
+}
+
+@media screen and (min-width: 48.75rem) {
   header {
-    height: 30vw;
+    padding: 3% 3% 1% 3%;
     font-family: "Heebo", sans-serif;
-    margin: 5vw;
-    margin-top: 5vw;
   }
   nav {
     color: white;
@@ -134,12 +153,15 @@ nav {
   .cart-header {
     width: 3vw;
   }
+  #menu {
+    display: none;
+  }
 }
 .hero {
   display: flex;
   align-items: center;
   width: 90%;
-  max-width: 68.75rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 
@@ -149,7 +171,7 @@ nav {
 
 .hero .hero__heading {
   text-transform: uppercase;
-  font-size: clamp(1.5625rem, 0.431rem + 4.8276vw, 3.75rem);
+  font-size: clamp(1.5625rem, 0.3521rem + 5.1643vw, 5rem);
 }
 
 .hero .hero__btn {
@@ -162,6 +184,19 @@ nav {
   font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
   margin-top: 1em;
 }
+.hero .hero__graphic {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.hero .hero__graphic .hero__graphic__nike {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.hero .hero__graphic .hero__graphic__shoe {
+  grid-column: 1/5;
+  grid-row: 1;
+}
 
 .marketing {
   width: 100%;
@@ -171,6 +206,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .marketing .shoe {
@@ -429,6 +465,7 @@ nav {
   border: none;
   font-weight: bold;
   font-family: "Heebo";
+  text-decoration: none;
 }
 
 .total-price {
@@ -441,11 +478,6 @@ nav {
   cursor: pointer;
 }
 
-.total-card {
-  display: flex;
-  gap: 1rem;
-}
-
 @media screen and (min-width: 1280px) {
   .card-main {
     margin: 10rem;
@@ -454,219 +486,71 @@ nav {
     padding-top: 5%;
   }
 }
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+/*
+    Todo: Responsive header
+    Todo: Carousel
+*/
+
+header {
+  height: 30vw;
+  font-family: "Heebo", sans-serif;
+  font-size: 2vw;
+  margin: 5vw;
+  margin-top: 5vw;
 }
 
-::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #797979;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-/*::-webkit-scrollbar-thumb:hover {
-  background: #222224;
-}*/
-::-webkit-scrollbar-track {
-  background: #f9f9f9;
-}
-
-body {
-  font-size: 1.6rem;
-}
-
-.container {
-  max-width: 124rem;
-  padding: 0 1rem;
-  margin: 0 auto;
-}
-
-/*.section-heading {
-  font-size: 3rem;
- color: var(--primary);
-  padding: 2rem 0;
-}*/
-#tranding {
-  padding: 4rem 0;
-}
-
-#tranding .tranding-slider {
-  height: 52rem;
-  padding: 2rem 0;
-  position: relative;
-}
-
-.tranding-slide .tranding-slide-img img {
-  width: 37rem;
-  height: 42rem;
-  border-radius: 2rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.tranding-slide .tranding-slide-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.tranding-slide-content .food-price {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+nav {
   color: white;
-}
-
-.tranding-slide-content .tranding-slide-content-bottom {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  color: white;
-}
-
-.food-rating {
-  padding-top: 1rem;
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
-.rating ion-icon {
-  color: #ec994b;
+.logo-header {
+  width: 15vw;
+  height: 3.5vw;
 }
 
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
+.ul-nav1 {
   display: none;
 }
 
-.tranding-slide {
-  width: 37rem;
-  height: 42rem;
-  position: relative;
-  background-image: url(../images/products/shoe_one.png);
-  background-repeat: no-repeat;
-  background-size: 23em;
+.ul-nav2 {
+  display: none;
 }
 
-.tranding-slider-control {
-  position: relative;
-  bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tranding-slider-control .swiper-button-next {
-  left: 58% !important;
-  transform: translateX(-58%) !important;
-}
-
-.tranding-slider-control .slider-arrow {
-  background: white;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  left: 42%;
-  transform: translateX(-42%);
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.tranding-slider-control .slider-arrow ion-icon {
-  font-size: 2rem;
-  color: #222224;
-}
-
-.tranding-slider-control .slider-arrow::after {
-  content: "";
-}
-
-.tranding-slider-control .swiper-pagination {
-  position: relative;
-  width: 15rem;
-  bottom: 1rem;
-}
-
-.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: #ec994b;
-}
-
-/*
-@media (max-width:450px) {
-  .tranding-slider-control .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
+@media screen and (min-width: 1280px) {
+  header {
+    height: 30vw;
+    font-family: "Heebo", sans-serif;
+    margin: 5vw;
+    margin-top: 5vw;
   }
-  .tranding-slider-control .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
+  nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
   }
-
-}
-*/
-@media (max-width: 500px) {
-  #tranding .tranding-slider {
-    height: 45rem;
+  .logo-header {
+    width: 12vw;
+    height: 3vw;
   }
-  .tranding-slide {
-    width: 28rem !important;
-    height: 36rem !important;
+  .ul-nav1 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25vw;
+    font-size: 1.5vw;
   }
-  .tranding-slide .tranding-slide-img img {
-    width: 28rem !important;
-    height: 36rem !important;
+  .ul-nav2 {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 8vw;
+    font-size: 1.5vw;
   }
-  .tranding-slider-control .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
+  .cart-header {
+    width: 3vw;
   }
-  .tranding-slider-control .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
-/*@media (max-width:990px) {
-  .tranding-slider-control .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-
-  .tranding-slider-control .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-}
-
-}
-
-//---------------------------------------------------------------//
-
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5;
-  }
-}
-
-@media (max-width:1440px) {
-  #tranding {
-    padding: 7rem 0;
-  }
-}
-*/
-/*
-    Todo: Responsive header (Burger menu)
-    Todo: Adjust the spacing between the header and the hero section
-    Todo: Carousel
-*/ /*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
