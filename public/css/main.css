@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap");
 body {
   background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
-  background: -webkit-linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   background: linear-gradient(-180deg, rgb(17, 24, 39), rgb(0, 0, 0));
   color: #fff;
   font-family: sans-serif;
@@ -76,22 +75,24 @@ select {
 }
 
 header {
-  height: 30vw;
+  padding: 5% 5% 2% 5%;
   font-family: "Heebo", sans-serif;
   font-size: 2vw;
-  margin: 5vw;
-  margin-top: 5vw;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.117);
 }
 
 nav {
-  color: white;
   display: flex;
   justify-content: space-between;
 }
+nav ul li > a {
+  color: white;
+  text-decoration: none;
+}
 
 .logo-header {
-  width: 15vw;
-  height: 3.5vw;
+  width: 25vw;
+  height: 6vw;
 }
 
 .ul-nav1 {
@@ -102,12 +103,28 @@ nav {
   display: none;
 }
 
-@media screen and (min-width: 1280px) {
+#menu {
+  cursor: pointer;
+  flex-direction: end;
+}
+
+.ul-nav1.menumobile, .ul-nav2.menumobile {
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+.ul-nav1.menumobile li, .ul-nav2.menumobile li {
+  padding: 0.5rem;
+}
+
+.cart-header {
+  height: 1rem;
+}
+
+@media screen and (min-width: 48.75rem) {
   header {
-    height: 30vw;
+    padding: 3% 3% 1% 3%;
     font-family: "Heebo", sans-serif;
-    margin: 5vw;
-    margin-top: 5vw;
   }
   nav {
     color: white;
@@ -135,6 +152,9 @@ nav {
   .cart-header {
     width: 3vw;
   }
+  #menu {
+    display: none;
+  }
 }
 .hero {
   display: flex;
@@ -160,6 +180,19 @@ nav {
   font-size: clamp(0.5625rem, 0.3362rem + 0.9655vw, 1rem);
   margin-top: 1em;
 }
+.hero .hero__graphic {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.hero .hero__graphic .hero__graphic__nike {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.hero .hero__graphic .hero__graphic__shoe {
+  grid-column: 1/5;
+  grid-row: 1;
+}
 
 .marketing {
   width: 100%;
@@ -169,6 +202,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 }
 .marketing .shoe {
   width: 30%;
@@ -423,6 +457,7 @@ nav {
 }
 .products-section {
   width: 90%;
+  max-width: 90rem;
   margin: 5rem auto;
 }
 
@@ -436,16 +471,24 @@ nav {
 }
 
 .product-card {
-  box-shadow: 0px 12px 7px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.5);
   padding: 0.8em;
   flex-basis: 15rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 2rem;
-  justify-content: space-between;
+  transition: transform 500ms ease-in-out;
+}
+.product-card > div {
+  grid-column: span 2;
+}
+.product-card:hover {
+  transform: scale(1.1);
 }
 .product-card .product-image {
-  flex-basis: 80%;
+  justify-self: center;
+  grid-column: span 4;
+  width: 10rem;
 }
 .product-card .product-name {
   font-weight: 600;
@@ -459,6 +502,7 @@ nav {
   color: #fff;
   padding: 0 0.5em 0 0.5em;
   border-radius: 10px;
+  grid-column: 3/5;
 }
 
 /*
