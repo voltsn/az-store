@@ -21,7 +21,8 @@ button {
 }
 
 .footer-main {
-  padding: 10vw;
+  margin-bottom: 3em;
+  margin-top: 3em;
 }
 
 .footer-copyright {
@@ -35,10 +36,10 @@ button {
 .footer-link {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  padding-top: 2%;
+  justify-content: space-evenly;
   gap: 0.5em;
   font-family: "Heebo";
-  letter-spacing: 0.1rem;
 }
 
 .footer-link-git {
@@ -47,6 +48,12 @@ button {
 .footer-link-git a {
   text-decoration: none;
   color: #fff;
+}
+.footer-link-git a:hover {
+  color: #2462ea;
+}
+.footer-link-git img:hover {
+  color: #2462ea;
 }
 
 @media screen and (min-width: 1280px) {
@@ -91,12 +98,14 @@ nav ul li > a {
 }
 
 .logo-header {
+  top: 0;
   width: 25vw;
   height: 6vw;
 }
 
 .ul-nav1 {
   display: none;
+  justify-content: flex-end;
 }
 
 .ul-nav2 {
@@ -105,20 +114,32 @@ nav ul li > a {
 
 #menu {
   cursor: pointer;
-  flex-direction: end;
 }
 
 .ul-nav1.menumobile, .ul-nav2.menumobile {
-  display: block;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-top: 9%;
+  width: 100%;
+  font-weight: 600;
+  padding: 2%;
+  position: absolute;
   list-style: none;
   text-align: center;
 }
 .ul-nav1.menumobile li, .ul-nav2.menumobile li {
   padding: 0.5rem;
+  width: 100%;
 }
 
 .cart-header {
-  height: 1rem;
+  width: auto;
+  height: 1.3em;
 }
 
 @media screen and (min-width: 48.75rem) {
@@ -139,7 +160,7 @@ nav ul li > a {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 25vw;
+    width: 30em;
     font-size: 1.5vw;
   }
   .ul-nav2 {
@@ -150,10 +171,17 @@ nav ul li > a {
     font-size: 1.5vw;
   }
   .cart-header {
-    width: 3vw;
+    position: absolute;
+    height: 1.3em;
+  }
+  .cart-header:hover {
+    color: #2462ea;
   }
   #menu {
     display: none;
+  }
+  a:hover {
+    color: #2462ea;
   }
 }
 .hero {
@@ -161,7 +189,7 @@ nav ul li > a {
   align-items: center;
   width: 90%;
   max-width: 90rem;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 .hero > div {
   width: 50%;
@@ -206,6 +234,7 @@ nav ul li > a {
 }
 .marketing .shoe {
   width: 30%;
+  margin-bottom: 10%;
 }
 .marketing h2 {
   width: 60%;
@@ -231,6 +260,7 @@ nav ul li > a {
 @media screen and (min-width: 1280px) {
   .marketing .shoe {
     width: 25%;
+    margin-bottom: 4%;
   }
   .marketing h2 {
     width: 50%;
@@ -506,6 +536,10 @@ nav ul li > a {
   display: block;
   text-align: center;
   text-decoration: none;
+}
+.product-card .add-to-cart-btn:hover {
+  background-color: #fff;
+  color: #0061BA;
 }
 
 /*

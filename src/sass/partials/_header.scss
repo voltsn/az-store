@@ -11,15 +11,18 @@ nav {
     ul li > a{
         color: white;
         text-decoration: none;
+
     }
 }
 .logo-header {
+    top:0;
     width: 25vw;
     height:6vw;
 }
 
 .ul-nav1 {
     display: none;
+    justify-content:flex-end;
     
 }
 .ul-nav2 {
@@ -28,22 +31,34 @@ nav {
 
 #menu{
     cursor: pointer;
-    flex-direction: end;
 }
 
 // Menu Burger
 .ul-nav1.menumobile, .ul-nav2.menumobile{
-    display: block;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin-top: 9%;
+    width: 100%;
+    font-weight: 600;
+    padding:2%;
+    position:absolute;
     list-style: none;
     text-align: center;
-
     li{
         padding: 0.5rem;
+        width:100%;
     }
 }
 
 .cart-header{
-    height: 1rem;
+
+    width: auto;
+    height: 1.3em;
 }
 
 
@@ -53,22 +68,26 @@ header {
     padding: 3% 3% 1% 3%;
     font-family: 'Heebo', sans-serif;
 }
+
 nav {
     color: white;
     display: flex;
     justify-content: space-between;
 }
+
 .logo-header {
     width: 12vw;
     height:3vw;
 }
+
 .ul-nav1 {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 25vw;
+    width: 30em;
     font-size: 1.5vw;
 }
+
 .ul-nav2 {
     display: flex;
     justify-content: space-between;
@@ -77,10 +96,19 @@ nav {
     font-size: 1.5vw;
 }
 .cart-header {
-    width: 3vw;
+    position: absolute;
+    height: 1.3em;
+    &:hover{
+        color:#2462ea;
+    }
 }
-
 #menu{
     display: none;
+}
+
+a{
+    &:hover{
+        color:#2462ea;
+    }
 }
 }

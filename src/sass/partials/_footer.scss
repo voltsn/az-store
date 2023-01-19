@@ -1,5 +1,6 @@
 .footer-main{
-    padding: 10vw;
+    margin-bottom:3em;
+    margin-top: 3em;
 }
 
 .footer-copyright{
@@ -8,16 +9,17 @@
     margin-bottom: 2vh;
     font-family: 'Heebo';
     letter-spacing: 0.2rem;
+
+
 }
 
 .footer-link{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    padding-top: 2%;
+    justify-content: space-evenly;
     gap: 0.5em;
     font-family: 'Heebo';
-    letter-spacing: 0.1rem;
-
 }
 
 .footer-link-git{
@@ -27,6 +29,14 @@
     a{
         text-decoration: none;
         color: #fff;
+        &:hover{
+            color:#2462ea;
+        }
+    }
+    img{
+        &:hover{
+            color:#2462ea;
+        }
     }
 }
 

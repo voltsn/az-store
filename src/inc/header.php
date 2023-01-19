@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet">
     <title>AZ store</title>
     <link rel="shortcut icon" href="src\img\favicon.png" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="public/js/carrousel.js"></script>
 </head>
 
 <body>
@@ -23,11 +27,9 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#products-section">Products</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="ul-nav2">
-                <li><img class="cart-header"src="src\img\shopping-cart.svg" alt="Shopping cart"></li>
-                <li><a href="#">Login</a></li>
-            </ul>
+                <li class="login"><a href="#">Login</a></li>
+                <li><a href="#"><img class="cart-header"src="src\img\shopping-cart.svg" alt="Shopping cart"></a></li>
+                </ul><ul class="ul-nav2"></ul>
             <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg" id="menu"><path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/></svg>
 
         </nav> 

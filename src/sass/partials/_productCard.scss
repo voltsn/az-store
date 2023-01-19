@@ -48,10 +48,11 @@
         color: #fff;
         padding: 0 .5em 0 .5em;
         border-radius: 10px;
-        grid-column: span 2;
-        display: block;
-        text-align: center;
-        text-decoration: none;////
+        grid-column: 3 / 5;
+        &:hover{
+            background-color:#fff;
+            color:  #0061BA ;
+        }
     }
 }
 
