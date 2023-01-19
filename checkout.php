@@ -50,16 +50,16 @@
         <div class="checkout-cart">
             <?php
             // Display the content of the cart here, by using a loop to browse the session array and generate the contents of the div.
-            if ($produits) {
+            /*if ($produits) {
                 foreach ($produits as $item) {
-                    echo "<p> $item[name] </p>
-                <p> $item[size] </p>
-                <p> $item[quantity] </p>
-                <p> $item[price] </p>";
+                    echo "<p> $item[name] </p>";
+                    echo "<p> $item[size] </p>";
+                    echo "<p> $item[quantity] </p>";
+                    echo "<p> $item[price] </p>";
             }
         } else {
             echo '<p>Your cart is empty.</p>';
-        }
+        } */
         ?>
         </div>
     </div>
