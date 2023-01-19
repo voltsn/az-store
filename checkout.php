@@ -1,34 +1,34 @@
-<?php 
-    include "./src/inc/country.php";
-    // Todo: Using $_SESSION retrieve the products from the cart and
-    //       display the contents of the cart in checkout-cart div
-    // Todo: If the form has been submitted (through POST) validate and sanitaze input
-    // Todo: If the data from the form is valid empty the cart and display a succes msg
-    //       instead of the form, if one of the inputs was invalid add a red outline to the input
-    // Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
-    // Note: HTML can be generated in php simply using echo:
-    //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
+<?php
+include "./src/inc/country.php";
+// Todo: Using $_SESSION retrieve the products from the cart and
+//       display the contents of the cart in checkout-cart div
+// Todo: If the form has been submitted (through POST) validate and sanitaze input
+// Todo: If the data from the form is valid empty the cart and display a succes msg
+//       instead of the form, if one of the inputs was invalid add a red outline to the input
+// Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
+// Note: HTML can be generated in php simply using echo:
+//        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php
-            // If the form has been submitted (through POST) validate and sanitaze input
-            
-    if(isset($_POST["submit"])) {
-        $inputs = array(
-            "email" => FILTER_VALIDATE_EMAIL,
-            "firstname" => FILTER_SANITIZE_STRING,
-            "lastname" => FILTER_SANITIZE_STRING,
-            "address" => FILTER_SANITIZE_STRING,
-            "city" => FILTER_SANITIZE_STRING
-);
-            
-// Appliquer les fonctions de sanitisation aux entrées
-    foreach($inputs as $input => $sanitize) {
-        if(isset($_POST[$input])) {
-        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+// If the form has been submitted (through POST) validate and sanitaze input
+
+if (isset($_POST["submit"])) {
+    $inputs = array(
+        "email" => FILTER_VALIDATE_EMAIL,
+        "firstname" => FILTER_SANITIZE_STRING,
+        "lastname" => FILTER_SANITIZE_STRING,
+        "address" => FILTER_SANITIZE_STRING,
+        "city" => FILTER_SANITIZE_STRING
+    );
+
+    // Appliquer les fonctions de sanitisation aux entrées
+    foreach ($inputs as $input => $sanitize) {
+        if (isset($_POST[$input])) {
+            $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
         }
     }
- }?>
- 
+} ?>
+
 <?php require "./src/inc/header.php"; ?>
 <article class="form-container">
     <div class="form-header">
@@ -55,11 +55,11 @@
                 <p> $item[size] </p>
                 <p> $item[quantity] </p>
                 <p> $item[price] </p>";
+                }
+            } else {
+                echo '<p>Your cart is empty.</p>';
             }
-        } else {
-            echo '<p>Your cart is empty.</p>';
-        }
-        ?>
+            ?>
         </div>
     </div>
 
