@@ -141,7 +141,7 @@
 
             <button class="checkout-submit-btn" type="submit">Send</button>
             
-            <?php
+            <?php /*
             if(isset($_POST["submit"])) {
                 $inputs = array(
                     "email" => ($_POST["email"]),
@@ -186,7 +186,7 @@
                     else {
                         echo "Successfully submitted form.";
                     }
-            }         
+            } */        
             ?>
         </form>
     </div>
