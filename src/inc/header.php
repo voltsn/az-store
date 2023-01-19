@@ -17,7 +17,7 @@
 <body>
     <header>
         <nav class="header-nav">
-        <img class="logo-header" src="src\img\AZstore_1.png" alt="Logo white AZ store">
+            <img class="logo-header" src="src\img\AZstore_1.png" alt="Logo white AZ store">
             <ul class="ul-nav1">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -25,11 +25,13 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="ul-nav2">
-                <li><img class="cart-header"src="src\img\shopping-cart.svg" alt="Shopping cart"></li>
+                <li><img class="cart-header" src="src\img\shopping-cart.svg" alt="Shopping cart"></li>
                 <li><a href="#">Login</a></li>
             </ul>
-            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg" id="menu"><path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/></svg>
+            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg" id="menu">
+                <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+            </svg>
 
-        </nav> 
+        </nav>
     </header>
-<main>
+    <main>

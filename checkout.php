@@ -1,34 +1,41 @@
-<?php 
-    include "./src/inc/country.php";
-    // Todo: Using $_SESSION retrieve the products from the cart and
-    //       display the contents of the cart in checkout-cart div
-    // Todo: If the form has been submitted (through POST) validate and sanitaze input
-    // Todo: If the data from the form is valid empty the cart and display a succes msg
-    //       instead of the form, if one of the inputs was invalid add a red outline to the input
-    // Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
-    // Note: HTML can be generated in php simply using echo:
-    //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
+<?php
+include "./src/inc/country.php";
+// Todo: Using $_SESSION retrieve the products from the cart and
+//       display the contents of the cart in checkout-cart div
+// Todo: If the form has been submitted (through POST) validate and sanitaze input
+// Todo: If the data from the form is valid empty the cart and display a succes msg
+//       instead of the form, if one of the inputs was invalid add a red outline to the input
+// Note: php tags can be inserted inbetween HTML tags like so: <h1> <?php $name ? > </h1>
+// Note: HTML can be generated in php simply using echo:
+//        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php
-            // If the form has been submitted (through POST) validate and sanitaze input
-            
-    if(isset($_POST["submit"])) {
-        $inputs = array(
-            "email" => FILTER_VALIDATE_EMAIL,
-            "firstname" => FILTER_SANITIZE_STRING,
-            "lastname" => FILTER_SANITIZE_STRING,
-            "address" => FILTER_SANITIZE_STRING,
-            "city" => FILTER_SANITIZE_STRING
-);
-            
-// Appliquer les fonctions de sanitisation aux entrées
-    foreach($inputs as $input => $sanitize) {
-        if(isset($_POST[$input])) {
-        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+// If the form has been submitted (through POST) validate and sanitaze input
+function validate_input()
+{
+    return strip_tags(trim());
+}
+
+if (isset($_POST["submit"])) {
+    if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'],  $_POST['address'], $_POST['city'], $_POST['zipcode']) && !empty($_POST['firstname']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zipcode'])) {
+        $firstname = $_POST['firstname'];
+        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == false) {
+            $errorMsg[] = 'Please enter valid email address';
+        } else {
+            $firstname = validate_input($_POST['firstname']);
         }
     }
- }?>
- 
+};
+
+// Appliquer les fonctions de sanitisation aux entrées
+foreach ($inputs as $input => $sanitize) {
+    if (isset($_POST[$input])) {
+        $_POST[$input] = filter_var(trim($_POST[$input]), $sanitize);
+    };
+};
+
+?>
+
 <?php require "./src/inc/header.php"; ?>
 <article class="form-container">
     <div class="form-header">
@@ -52,14 +59,14 @@
             if ($produits) {
                 foreach ($produits as $item) {
                     echo "<p> $item[name] </p>
-                <p> $item[size] </p>
-                <p> $item[quantity] </p>
-                <p> $item[price] </p>";
+                    <p> $item[size] </p>
+                    <p> $item[quantity] </p>
+                    <p> $item[price] </p>";
+                }
+            } else {
+                echo '<p>Your cart is empty.</p>';
             }
-        } else {
-            echo '<p>Your cart is empty.</p>';
-        }
-        ?>
+            ?>
         </div>
     </div>
 
@@ -71,7 +78,7 @@
             </div>
 
             <div class="form-control">
-                <input class="form-input" id="lastname" type="text" name="full_name" required>
+                <input class="form-input" id="lastname" type="text" name="lastname" required>
                 <label for="lastname"> Last Name </label>
             </div>
 
@@ -133,7 +140,7 @@
                     // Display the countries in the form                        
                     foreach ($countries as $country) {
                         echo '<option value="' . $country . '">' . $country . '</option>';
-                    }
+                    };
                     ?>
                 </select>
                 </select>
