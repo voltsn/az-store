@@ -21,8 +21,8 @@ button {
 }
 
 .footer-main {
-  padding: 10vw;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  margin-top: 3em;
 }
 
 .footer-copyright {
@@ -195,7 +195,7 @@ nav ul li > a {
   align-items: center;
   width: 90%;
   max-width: 90rem;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 .hero > div {
   width: 50%;
