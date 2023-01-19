@@ -11,10 +11,10 @@ include "./src/inc/country.php";
 ?>
 <?php
 // If the form has been submitted (through POST) validate and sanitaze input
-function validate_input()
-{
-    return strip_tags(trim(''));
-}
+// function validate_input()
+// {
+//     return strip_tags(trim(''));
+// }
 
 if (isset($_POST["submit"])) {
     if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'],  $_POST['address'], $_POST['city'], $_POST['zipcode']) && !empty($_POST['firstname']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zipcode'])) {
