@@ -18,7 +18,8 @@
             <button class="btn hero__btn">See our store</button>
         </div>
         <div class="hero__graphic">
-            <img src="src\img\shoe_one.png" class="hero__graphic__img" alt="shoe Nike">
+            <img src="public/images/icons/Nike.svg" class="hero__graphic__nike" alt="Nike logo">
+            <img src="public/images/products/shoe_one.png" class="hero__graphic__shoe" alt="shoe Nike">
         </div>
     </section>
     <section class="products-section">
