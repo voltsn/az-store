@@ -36,10 +36,10 @@ button {
 .footer-link {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  padding-top: 2%;
+  justify-content: space-evenly;
   gap: 0.5em;
   font-family: "Heebo";
-  letter-spacing: 0.1rem;
 }
 
 .footer-link-git {
@@ -98,6 +98,7 @@ nav ul li > a {
 }
 
 .logo-header {
+  top: 0;
   width: 25vw;
   height: 6vw;
 }
@@ -233,7 +234,7 @@ nav ul li > a {
 }
 .marketing .shoe {
   width: 30%;
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 }
 .marketing h2 {
   width: 60%;
@@ -259,6 +260,7 @@ nav ul li > a {
 @media screen and (min-width: 1280px) {
   .marketing .shoe {
     width: 25%;
+    margin-bottom: 4%;
   }
   .marketing h2 {
     width: 50%;

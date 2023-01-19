@@ -16,10 +16,10 @@
 .footer-link{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    padding-top: 2%;
+    justify-content: space-evenly;
     gap: 0.5em;
     font-family: 'Heebo';
-    letter-spacing: 0.1rem;
 }
 
 .footer-link-git{
