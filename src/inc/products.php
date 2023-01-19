@@ -30,7 +30,7 @@
             "price" => 234
         ],
         [            
-            "id" => 4,
+            "id" => 5,
             "name" => "NIKE Air",
             "img" => "src\img\shoe_one.png",
             "alt" => "Nike shoe",

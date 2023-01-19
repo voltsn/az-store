@@ -21,7 +21,7 @@
             <ul class="ul-nav1">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="#products-section">Products</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="ul-nav2">

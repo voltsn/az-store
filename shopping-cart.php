@@ -1,7 +1,6 @@
 <?php 
     // Todo: Start a session 
     session_start();
-    var_dump($_SESSION['cart']);
 
     //       Docs: https://www.php.net/manual/fr/book.session.php
     // Todo: If there are products in the cart display them
