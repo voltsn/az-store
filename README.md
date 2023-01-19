@@ -41,7 +41,9 @@ The shopping cart should be able to add and remove products. The shopping cart s
     SASS
     JAVASCRIPT
     PHP
+## Preview
+![image](https://user-images.githubusercontent.com/117726122/213467104-4a36b33b-e630-48a8-bb7d-d7f212822e74.png)
 
 ## Group
 
-[Arno](https://github.com/voltsn), [Dominique](https://github.com/DCoppee), [Mathilde](https://github.com/MathildeCornelis) , [Marnie Benalia](https://github.com/MarnieBenalia), [Milo](https://github.com/Milo-star)
+[Arno](https://github.com/voltsn), [Dominique](https://github.com/DCoppee), [Mathilde](https://github.com/MathildeCornelis) , [Marnie](https://github.com/MarnieBenalia), [Milo](https://github.com/Milo-star)
