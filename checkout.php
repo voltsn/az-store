@@ -13,7 +13,7 @@ include "./src/inc/country.php";
 // If the form has been submitted (through POST) validate and sanitaze input
 function validate_input()
 {
-    return strip_tags(trim());
+    return strip_tags(trim(''));
 }
 
 if (isset($_POST["submit"])) {
