@@ -1,7 +1,13 @@
 <?php 
+    require "./src/inc/products.php";
     require "./src/inc/cart.php";
     session_start();
-    $_SESSION['cart'] = new Cart();
+    if(isset($_SESSION["cart"])){
+        echo "<pre>";
+        print_r($_SESSION["cart"]);
+        echo "</pre>";
+    }
+
 
     // Todo: Update the cart when the user clicks on either the add or the remove button
     //       Idea: perhaps create a javscript file containing one or more asyncronus functions
@@ -22,7 +28,7 @@
             <img src="public/images/products/shoe_one.png" class="hero__graphic__shoe" alt="shoe Nike">
         </div>
     </section>
-    <section class="products-section">
+    <section class="products-section" id="products-section">
         <h2> <span class="accent">Our</span> last products</h2>
         <div class="latest-products">
             <?php 
@@ -35,7 +41,7 @@
                                 <p class='product-name'>$product[name]</p>
                                 <p class='product-price'>$product[price]€</p>
                             </div>
-                            <button class='add-to-cart-btn'>Add to card</button>
+                            <a href='./update-cart.php/?id=$product[id]' class='add-to-cart-btn'>Add to card</a>
                         </article>
                     ";
                 }
