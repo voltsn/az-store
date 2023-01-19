@@ -17,6 +17,10 @@
         }
     }
 
-    header("Location: http://localhost/php-intro/az-store/index.php#products-section");
+    $end = count(explode('/', $_SERVER['REQUEST_URI'])) - 2;
+    $redirect = array_slice(explode('/',$_SERVER['REQUEST_URI']),0, $end);
+
+    $link = "http://".$_SERVER["HTTP_HOST"].join("/", $redirect);
+    header("Location: $link/index.php#products-section");
     exit;
 ?>
