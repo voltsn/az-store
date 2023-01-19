@@ -47,6 +47,10 @@
         public function get_products() {
             return $this->products;
         }
+
+        public function get_total_items(){
+            return $this->total_items;
+        }
     }
 
 ?>
