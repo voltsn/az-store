@@ -1,8 +1,11 @@
 <?php 
+require "./src/inc/cart.php";
     // Todo: Start a session 
     session_start();
-    var_dump($_SESSION['cart']);
-
+    $cart;
+    if($_SESSION['cart']){
+        $cart = $_SESSION['cart'];
+    }
     //       Docs: https://www.php.net/manual/fr/book.session.php
     // Todo: If there are products in the cart display them
     //       Otherwise display: "The cart is empty" msg and disable the Go to checkout button.
@@ -12,11 +15,12 @@
     //        <?php echo "<div class='some-class'> $SomeVariable </div>"? >
 ?>
 <?php  require "./src/inc/header.php"; ?>
-<?php  require "./src/inc/panier.php"; ?>
-<?php  require "./src/inc/products.php"; ?>
 <section class="card-main">
-    <h2 class="card-title">Your <span>cart</span> (X Articles)</h2>
-    <?php // Generate the html for the products here ?>
+    <h2 class="card-title">Your <span>cart</span> (<?php $cart ?> Articles)</h2>
+    <?php
+        
+        // Generate the html for the products here 
+    ?>
     <div class="basket-main">
         <img src="./public/images/products/shoe_two.png" alt="Chaussure AirMax" class="card-img">
         <div class="info-card">
